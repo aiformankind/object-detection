@@ -1,0 +1,26 @@
+<annotation>
+    <folder>tmpda5w5lkl</folder>
+    <filename>cjov4ppmcu3910d40djrl4udh.jpeg</filename>
+    <path>/tmp/tmpda5w5lkl/cjov4ppmcu3910d40djrl4udh.jpeg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>2235</width>
+        <height>1676</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>Square</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+                <xmin>719</xmin>
+                <ymin>430</ymin>
+                <xmax>1360</xmax>
+                <ymax>1082</ymax>
+            </bndbox>
+        </object>
+    </annotation>
