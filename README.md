@@ -3,6 +3,7 @@
 In this tutorial, we will show you how to build an object detector for a custom dataset. You can find the custom dataset in the input/images folder. The goal is to detect the square, circle, and triangle shapes in the images.
 
 <img src=docs/object-detect.png />
+<img src=docs/object-detect-second-example.png/>
 
 We adapted the Dockerfile provided by Tensorflow and prepared a docker container preloaded with all the necessary libraries to get you started quickly to build your own object detection using custom dataset. We modified the scripts provided by Tensorflow and from other excellent online tutorials eg. https://github.com/bourdakos1/Custom-Object-Detection to give an easy to follow step by step tutorial.
 
