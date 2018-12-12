@@ -156,11 +156,11 @@ def create_tf_record(output_filename,
   writer.close()
 
 def main(_):
-  label_map_dict = label_map_util.get_label_map_dict('annotations/label_map.pbtxt')
+  label_map_dict = label_map_util.get_label_map_dict('/tensorflow/input/annotations/label_map.pbtxt')
 
   logging.info('Reading from Pet dataset.')
-  image_dir = 'images'
-  annotations_dir = 'annotations'
+  image_dir = '/tensorflow/input/images'
+  annotations_dir = '/tensorflow/input/annotations'
   examples_path = os.path.join(annotations_dir, 'trainval.txt')
   examples_list = dataset_util.read_examples_list(examples_path)
 
@@ -175,8 +175,8 @@ def main(_):
   print('%d training and %d validation examples.',
                len(train_examples), len(val_examples))
 
-  train_output_path = 'train.record'
-  val_output_path = 'val.record'
+  train_output_path = '/tensorflow/input/train.record'
+  val_output_path = '/tensorflow/input/val.record'
   create_tf_record(train_output_path, label_map_dict, annotations_dir,
                    image_dir, train_examples)
   create_tf_record(val_output_path, label_map_dict, annotations_dir,
