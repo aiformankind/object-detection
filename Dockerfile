@@ -23,6 +23,8 @@ WORKDIR $WORKPATH
 COPY . $WORKPATH/
 
 EXPOSE 8888 6006
+ENV DEBIAN_FRONTEND noninteractive 
+#term is not set so the dialog frontend is not usable
 
 RUN apt-get update
 RUN apt-get upgrade -y
