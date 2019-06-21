@@ -26,7 +26,7 @@ EXPOSE 8888 6006
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y git 
+RUN apt-get install -y git curl unzip
 
 # Get the tensorflow models research directory, and move it into tensorflow
 # source folder to match recommendation of installation
