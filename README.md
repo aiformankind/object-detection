@@ -86,3 +86,14 @@ You can find the custom images for this tutorial in the /tensorflow/input/images
             </bndbox>
         </object>
 ```        
+
+## get model
+
+1. mkdir modelBuild
+2. cd modelBuild
+3. curl -O "http://download.tensorflow.org/models/object_detection/faster_rcnn_resnet101_coco_11_06_2017.tar.gz"
+4. tar xzf faster_rcnn_resnet101_coco_11_06_2017.tar.gz
+5. python /notebooks/tensorflow/models/research/object_detection/legacy/train.py --logtostderr --train_dir=/notebooks/object-detection/modelBuild/build/ --pipeline_config_path=/notebooks/object-detection/faster_rcnn_resnet101.config
+
+
+6. python /notebooks/tensorflow/models/research/object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path /notebooks/object-detection/faster_rcnn_resnet101.config --trained_checkpoint_prefix /notebooks/object-detection/modelBuild/build/model.ckpt-XXX --output_directory /notebooks/object-detection/modelBuild/build/`0`
